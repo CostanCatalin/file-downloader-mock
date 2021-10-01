@@ -1,0 +1,68 @@
+.list-container {
+  .controls {
+    margin-bottom: 15px;
+
+    .checkbox-component,
+    .button {
+      display: inline-block;
+      vertical-align: bottom;
+      text-align: left;
+      margin: 0;
+    }
+
+    .button {
+      cursor: pointer;
+      position: relative;
+      padding: 0 15px 0 25px;
+      border-radius: 3px;
+      transition: 0.35s ease-in-out;
+
+      &:hover {
+        background-color: $row-hover-color;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 13px;
+        background: url('/assets/img/download.svg') no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+      }
+    }
+
+    .checkbox-component{
+      width: 170px;
+
+      .checkbox {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .header {
+    border: 1px solid $border-color;
+    border-bottom: none;
+    padding: 10px 0;
+    display: grid;
+    grid-auto-flow: column;  
+    grid-template-columns: 80px 13% 13% auto 13%;
+   
+    
+    h4 {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+      font-weight: 400;
+
+      &:last-of-type{
+        margin-left: auto;
+        width: 125px;
+        justify-self: end;
+      }
+    }
+  }
+}

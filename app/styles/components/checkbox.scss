@@ -1,0 +1,67 @@
+.checkbox-component {
+  cursor: pointer;
+  width: fit-content;
+  padding: 0 10px;
+  user-select: none;
+  border-radius: 3px;
+  transition: 0.35s ease-in-out background-color;
+
+  &:hover {
+    background-color: $row-hover-color;
+  }
+
+  .checkbox {
+    width: 15px;
+    height: 15px;
+    border: 1px solid $gray-color;
+    display: inline-block;
+    vertical-align: middle;
+    transition: 0.35s ease-in-out;
+    border-radius: 2px;
+    position: relative;
+
+    &.selected {
+      background-color: $checkbox-selected-color;
+      border-color: $checkbox-selected-color;
+
+      .checkmark {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 13px;
+        background: url($checkmark-svg) no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+      }
+    }
+
+    &.indeterminate {
+      background-color: $checkbox-selected-color;
+      border-color: $checkbox-selected-color;
+
+      .checkmark {
+        content: "";
+        display: block;
+        width: 9px;
+        height: 4px;
+        background-color: white;
+        position: absolute;
+        top: 6px;
+        left: 3px;
+      }
+    }
+
+    &.disabled {
+      background-color: $border-color;
+      cursor: not-allowed;
+    }
+  }
+
+  p {
+    displaY: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }
+}

@@ -1,0 +1,11 @@
+
+<div class="list-item{{if @item.isSelected " selected"}}" {{on "click" @onSelectionChanged}}>
+  <Checkbox
+  @isDisabled={{@item.isDisabled}}
+  @isSelected={{@item.isSelected}}/>
+  <p class="name">{{@item.name}}</p>
+  <p class="device">{{@item.device}}</p>
+  <p class="path">{{@item.path}}</p>
+  <p class="status{{unless @item.isDisabled " available"}}">{{capitalize @item.status}}</p>
+</div>
+{{yield}}

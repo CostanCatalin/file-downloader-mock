@@ -1,0 +1,26 @@
+<div class="list-container">
+  <div class="controls">
+    <Checkbox
+      @state={{this.selectAllState}}
+      @selectionCallback={{fn this.selectAllClicked}}>
+        <p>{{this.selectedText}}</p>
+    </Checkbox>
+    <p class="button" {{on "click" @downloadAction}}><span class="download-icon"></span>Download Selected</p>
+  </div>
+
+{{#if @headerCells}}
+  <div class="header">
+    <h4></h4>
+    {{#each @headerCells as |heading|}}
+      <h4>{{capitalize heading}}</h4>
+    {{/each}}
+  </div>
+{{/if}}
+
+{{#each @items as |item|}}
+  <List::ListItem
+    @item={{item}}
+    @onSelectionChanged={{fn this.itemSelectionChanged item}}>
+  </List::ListItem>
+{{/each}}
+</div>

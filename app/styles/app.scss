@@ -1,0 +1,14 @@
+@import "_variables";
+@import "normalize";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+    color: $gray-color;
+    // todo: remove;
+    padding: 50px;
+}
+
+@import "components/checkbox";
+@import "components/list";
+@import "components/list-item";

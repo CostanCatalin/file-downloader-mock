@@ -1,0 +1,50 @@
+.list-item {
+  display: grid;
+  grid-auto-flow: column;  
+  grid-template-columns: 70px 13% 13% auto 13%;
+  max-width: 100%;
+  min-width: 800px;
+  padding: 8px;
+  border: 1px solid $border-color;
+  border-bottom: none;
+  transition: 0.35s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $row-hover-color;
+  }
+
+  &.selected {
+    background-color: $row-selected-color;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid $border-color;
+  }
+
+  p {
+    margin: 0;
+    text-align: left;
+    min-width: 130px;
+  }
+
+  .status {
+    margin-left: auto;
+    width: 125px;
+    justify-self: end;
+    position: relative;
+
+    &.available:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $status-circle-color;
+      left: -20px;
+      top: 50%;
+      margin-top: -8px;
+    }
+  }
+}

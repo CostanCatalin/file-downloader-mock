@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import FileModel from 'file-list/models/file';
+import FileModel from 'file-downloader/models/file';
 
 export default class MockupRoute extends Route {
   model() {
